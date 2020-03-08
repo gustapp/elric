@@ -4,7 +4,7 @@ setup(
     name='src',
     packages=find_packages(),
     version='0.1.0',
-    description='Minimalist ETL for research projects',
+    description='Minimalist elric for research projects',
     author='Gustavo Padilha Polleti',
     license='MIT',
 )

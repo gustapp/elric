@@ -1,7 +1,7 @@
-etl
+elric
 ==============================
 
-Minimalist ETL for research projects
+Minimalist elric for research projects
 
 Project Organization
 ------------
