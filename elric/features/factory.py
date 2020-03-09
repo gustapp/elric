@@ -1,5 +1,5 @@
 
-from elric.data.__knowledge_base import loader, dictionarizer
+from elric.features.__knowledge_base import loader, dictionarizer
 from os import path
 
 
@@ -26,8 +26,7 @@ class KnowledgeBaseFactory(DataSetFactory):
         relation2id = dictionarizer.relation2id(relations)
 
         return {
-          'entities': { 'entity2id': entity2id, 'id2entity': id2entity },
-          'relations': { 'relation2id': relation2id },
+          'entities': {'entity2id': entity2id, 'id2entity': id2entity},
+          'relations': {'relation2id': relation2id},
           'facts': loader.load_facts(kg_path)
         }
-
