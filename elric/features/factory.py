@@ -12,9 +12,10 @@ class KnowledgeBaseFactory(DataSetFactory):
 
     path = path.join(DataSetFactory.path, "knowledge graphs")
 
-    def load_graph(name):
+    @classmethod
+    def load_graph(factory, name):
 
-        kg_path = path.join(KnowledgeBaseFactory.path, name)
+        kg_path = path.join(factory.path, name)
 
         entities = loader.load_entities(kg_path)
 

@@ -1,13 +1,17 @@
 class KnowledgeBaseDictionarizer(object):
 
-    def __create_dict(df, key):
+    @staticmethod
+    def create_dict(df, key):
         return df.set_index(key).T.to_dict()
 
-    def entity2id(df):
-        return KnowledgeBaseDictionarizer.__create_dict(df, 'entity')
+    @classmethod
+    def entity2id(dictionarizer, df):
+        return dictionarizer.create_dict(df, 'entity')
 
-    def id2entity(df):
-        return KnowledgeBaseDictionarizer.__create_dict(df, 'id')
+    @classmethod
+    def id2entity(dictionarizer, df):
+        return dictionarizer.create_dict(df, 'id')
 
-    def relation2id(df):
-        return KnowledgeBaseDictionarizer.__create_dict(df, 'relation')
+    @classmethod
+    def relation2id(dictionarizer, df):
+        return dictionarizer.create_dict(df, 'relation')
