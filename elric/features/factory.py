@@ -1,11 +1,7 @@
 
+from elric.data_factory import DataSetFactory
 from elric.features.__knowledge_base import loader, dictionarizer
 from os import path
-
-
-class DataSetFactory(object):
-    root = "/"
-    path = path.join(root, 'data')
 
 
 class KnowledgeBaseFactory(DataSetFactory):
