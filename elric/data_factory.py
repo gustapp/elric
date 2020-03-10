@@ -2,5 +2,5 @@ from os import path
 
 
 class DataSetFactory(object):
-    root = "/"
+    root = "/gdrive"
     path = path.join(root, 'data')
